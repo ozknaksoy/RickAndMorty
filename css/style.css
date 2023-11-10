@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header .header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+header .header-container .img-real {
+  position: absolute;
+  width: 60%;
+}
+header .header-container .img-black {
+  z-index: 1;
+  opacity: 0.2;
+  width: 100%;
+}
+
+.pagination-container {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.pagination-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(123, 123, 123, 0.584);
+  border-radius: 50px;
+}
+.pagination-container ul li {
+  color: orangered;
+  font-size: x-large;
+  margin: 5px;
+}
+.pagination-container ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: black;
+}
+.container main .container-main {
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.container main .container-main .list-items {
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .container main .container-main .list-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 510px) {
+  .container main .container-main .list-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 310px) {
+  .container main .container-main .list-items {
+    grid-template-columns: 1fr;
+    width: 50%;
+  }
+}
+.container main .container-main .list-items .list-item {
+  margin: 5px;
+}
+.container main .container-main .list-items .card {
+  display: flex;
+  flex-direction: column;
+}
+.container main .container-main .list-items .card .card-header {
+  flex: 1 1;
+  position: relative;
+  padding-bottom: 100%;
+}
+.container main .container-main .list-items .card .card-header .remove-item {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+.container main .container-main .list-items .card .card-header img {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.container main .container-main .list-items .card .card-body {
+  padding: 3px;
+  background-color: rgba(123, 123, 123, 0.584);
+  border-radius: 0 0 10px 10px;
+  border-top: none;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container main .container-main .list-items .card .card-body h2 {
+  color: darkorange;
+}
+.container main .container-main .list-items .card .card-body span {
+  color: antiquewhite;
+}/*# sourceMappingURL=style.css.map */
