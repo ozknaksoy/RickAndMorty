@@ -4,7 +4,6 @@ import { renderCharacterItems } from "./ui.js";
 const listItems = document.querySelector('.js-list-items');
 const BASE_URL = "https://rickandmortyapi.com/api/character";
 
-
 let page = document.querySelectorAll(".page");
 
 
