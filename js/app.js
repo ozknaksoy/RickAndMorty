@@ -13,8 +13,9 @@ page.forEach(pageClick => {
     pageClick.addEventListener('click', () => {
         get(`${BASE_URL}/?page=${pageClick.textContent}`)
             .then((data) => {
-
+                listItems.innerHTML = '';
                 renderCharacterItems(data, listItems);
+            
             })
     })
 })
