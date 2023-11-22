@@ -252,17 +252,20 @@ header .header-container .img-black {
      object-position: center;
 }
 .container main .container-main .list-items .card .card-body {
-  padding: 3px;
+  padding: 5px;
   background-color: rgba(123, 123, 123, 0.584);
   border-radius: 0 0 10px 10px;
   border-top: none;
-  height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 .container main .container-main .list-items .card .card-body h2 {
+  color: antiquewhite;
+}
+.container main .container-main .list-items .card .card-body h2 a {
   color: darkorange;
+  text-decoration: none;
 }
 .container main .container-main .list-items .card .card-body span {
   color: antiquewhite;

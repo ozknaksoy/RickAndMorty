@@ -133,19 +133,22 @@ header {
           }
 
           .card-body {
-            padding: 3px;
+            padding: 5px;
             background-color: rgba(123, 123, 123, 0.584);
             border-radius: 0 0 10px 10px;
             border-top: none;
-            height: 130px;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
 
             h2 {
-              color: darkorange;
+              color: antiquewhite;  
+              a{
+                color: darkorange;
+                text-decoration: none;
+              }
             }
-
+            
             span {
               color: antiquewhite;
             }
