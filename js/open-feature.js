@@ -1,7 +1,6 @@
-export const openFeature = function (property ) {
-    
+export const openFeature = function (character) {
 
-    property.forEach(propertys => {
+    character.forEach(propertys => {
         let container = document.querySelector('container');
         container.innnerHTML = `
         <div class="character-container">
@@ -19,5 +18,5 @@ export const openFeature = function (property ) {
     </div>
         `
     });
-   
+
 }
