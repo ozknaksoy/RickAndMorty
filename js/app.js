@@ -1,45 +1,45 @@
 import { get } from './request.js';
-import { renderCharacterItems } from './ui.js';
-import { openFeature } from './open-feature.js';
-
+import { renderCharacterItems, openFeature } from './ui.js';
 
 const listItems = document.querySelector('.js-list-items');
+const container = document.querySelector('.container');
+const feature = document.querySelectorAll('.feature');
 let page = document.querySelectorAll('.page');
-let feature = document.querySelectorAll('.feature');
-let container = document.querySelector('.container');
 
-
-const BASE_URL = 'https://rickandmortyapi.com/api/character';
-
+const URL = {
+    base_url:'https://rickandmortyapi.com/api/character'
+   
+}
 
 const getData = function () {
-    get(BASE_URL)
+    get(URL.base_url)
         .then((datas) => {
             renderCharacterItems(datas, listItems);
         })
 }
 getData();
 
-
-feature.forEach(features => {
-    features.addEventListener('click', () => {
-        console.log('tiklandi');
-    })
-});
-
-
 page.forEach(pageClick => {
     // console.log(pageClick.textContent);
     pageClick.addEventListener('click', () => {
-        get(`${BASE_URL}/?page=${pageClick.textContent}`)
+        get(`${URL.base_url}/?page=${pageClick.textContent}`)
             .then((data) => {
                 listItems.innerHTML = '';
                 renderCharacterItems(data, listItems);
+
             })
     })
+})  
+feature.forEach(addFeature => {
+    // console.log(addFeature.textContent)
+    addFeature.addEventListener('click', () => {
+        const featureText = addFeature.textContent;
+        get(`${URL.base_url}/${featureText}`)
+        .then((datas) => {
+            openFeature(datas, container)
+        })
+        .catch((error) => {
+            console.error('basarisiz', error)
+        })
+    })
 })
-
-
-
-
-
