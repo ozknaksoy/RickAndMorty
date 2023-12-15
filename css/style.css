@@ -134,11 +134,45 @@ table {
   border-spacing: 0;
 }
 
-header {
+body {
+  background-color: black;
+}
+body .character-body {
+  display: none;
+}
+body .character-body .character-grid {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+body .character-body .character-grid .character-container {
+  border-radius: 10px;
+  background-color: rgb(123, 123, 123);
+}
+body .character-body .character-grid .character-container .character-images img {
+  width: 400px;
+  border-radius: 10px 10px 0 0;
+}
+body .character-body .character-grid .character-container .character-feature {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3px;
+}
+body .character-body .character-grid .character-container .character-feature h2,
+body .character-body .character-grid .character-container .character-feature span {
+  color: antiquewhite;
+}
+body .character-body .character-grid .character-container .character-feature a {
+  color: darkorange;
+}
+body .character-list-general header {
   display: flex;
   justify-content: center;
 }
-header .header-container {
+body .character-list-general header .header-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -146,58 +180,52 @@ header .header-container {
   align-items: center;
   position: relative;
 }
-header .header-container .img-real {
-  position: absolute;
-  width: 60%;
-}
-header .header-container .img-black {
+body .character-list-general header .header-container .img-header {
   z-index: 1;
-  opacity: 0.2;
+  opacity: 0.8;
   width: 100%;
 }
-
-.pagination-container {
+body .character-list-general .pagination-container {
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
 }
-.pagination-container ul {
+body .character-list-general .pagination-container ul {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(123, 123, 123, 0.584);
   border-radius: 50px;
 }
-.pagination-container ul li {
+body .character-list-general .pagination-container ul li {
   color: orangered;
   font-size: x-large;
   margin: 5px;
 }
-.pagination-container ul li a {
+body .character-list-general .pagination-container ul li a {
   color: white;
   text-decoration: none;
 }
-
-.container {
+body .character-list-general .container {
   display: flex;
   justify-content: center;
 }
-.container main {
+body .character-list-general .container main {
   width: 100%;
   height: 100%;
   display: flex;
   background-color: black;
 }
-.container main .container-main {
+body .character-list-general .container main .container-main {
   height: 100%;
   width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
-.container main .container-main .list-items {
+body .character-list-general .container main .container-main .list-items {
   width: 80%;
   height: -moz-fit-content;
   height: fit-content;
@@ -206,41 +234,41 @@ header .header-container .img-black {
   gap: 20px;
 }
 @media (max-width: 768px) {
-  .container main .container-main .list-items {
+  body .character-list-general .container main .container-main .list-items {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 510px) {
-  .container main .container-main .list-items {
+  body .character-list-general .container main .container-main .list-items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 310px) {
-  .container main .container-main .list-items {
+  body .character-list-general .container main .container-main .list-items {
     grid-template-columns: 1fr;
     width: 50%;
   }
 }
-.container main .container-main .list-items .list-item {
+body .character-list-general .container main .container-main .list-items .list-item {
   margin: 5px;
 }
-.container main .container-main .list-items .card {
+body .character-list-general .container main .container-main .list-items .card {
   display: flex;
   flex-direction: column;
 }
-.container main .container-main .list-items .card .card-header {
+body .character-list-general .container main .container-main .list-items .card .card-header {
   flex: 1 1;
   position: relative;
   padding-bottom: 100%;
 }
-.container main .container-main .list-items .card .card-header .remove-item {
+body .character-list-general .container main .container-main .list-items .card .card-header .remove-item {
   position: absolute;
   top: 5px;
   right: 5px;
   z-index: 2;
   cursor: pointer;
 }
-.container main .container-main .list-items .card .card-header img {
+body .character-list-general .container main .container-main .list-items .card .card-header img {
   border-radius: 10px 10px 0 0;
   width: 100%;
   height: 100%;
@@ -251,7 +279,8 @@ header .header-container .img-black {
   -o-object-position: center;
      object-position: center;
 }
-.container main .container-main .list-items .card .card-body {
+body .character-list-general .container main .container-main .list-items .card .card-body {
+  height: 7vh;
   padding: 5px;
   background-color: rgba(123, 123, 123, 0.584);
   border-radius: 0 0 10px 10px;
@@ -260,13 +289,13 @@ header .header-container .img-black {
   flex-direction: column;
   justify-content: space-evenly;
 }
-.container main .container-main .list-items .card .card-body h2 {
+body .character-list-general .container main .container-main .list-items .card .card-body h2 {
   color: antiquewhite;
 }
-.container main .container-main .list-items .card .card-body h2 a {
+body .character-list-general .container main .container-main .list-items .card .card-body h2 a {
   color: darkorange;
   text-decoration: none;
 }
-.container main .container-main .list-items .card .card-body span {
+body .character-list-general .container main .container-main .list-items .card .card-body span {
   color: antiquewhite;
 }/*# sourceMappingURL=style.css.map */

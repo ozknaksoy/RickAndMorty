@@ -1,161 +1,208 @@
 @import "reset";
 
-
-
-header {
-  display: flex;
-  justify-content: center;
-
-  .header-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-    .img-real {
-      position: absolute;
-      width: 60%;
-
-    }
-
-    .img-black {
-      z-index: 1;
-      opacity: 0.2;
-      width: 100%;
-    }
-
-  }
-
-}
-
-.pagination-container {
+body {
   background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  
-  
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(123, 123, 123, 0.584);
-    border-radius: 50px;
-    
-    
-    li {
-      color: orangered;
-      font-size: x-large;
-      margin: 5px;
 
-      a {
-        color: white;
-        text-decoration: none;
+  .character-body {
+    display: none;
+
+    .character-grid {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+
+      .character-container {
+        border-radius: 10px;
+        background-color: rgba(123, 123, 123);
+
+        .character-images {
+          img {
+            width: 400px;
+            border-radius: 10px 10px 0 0;
+          }
+        }
+
+        .character-feature {
+          display: flex;
+          align-items: start;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 3px;
+
+          h2,
+          span {
+            color: antiquewhite;
+          }
+
+          a {
+            color: darkorange;
+          }
+        }
       }
-
     }
   }
-}
 
-.container {
-  display: flex;
-  justify-content: center;
+  .character-list-general {
 
-  main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    background-color: black;
 
-    .container-main {
-      height: 100%;
-      width: 1200px;
-      margin: 0 auto;
+
+    header {
       display: flex;
       justify-content: center;
 
-      .list-items {
-        width: 80%;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+      .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
 
-        @media (max-width:768px) {
-          grid-template-columns: repeat(3, 1fr);
-
-        }
-
-        @media (max-width:510px) {
-          grid-template-columns: repeat(2, 1fr);
+        .img-header {
+          z-index: 1;
+          opacity: 0.8;
+          width: 100%;
 
         }
 
-        @media (max-width:310px) {
-          grid-template-columns: 1fr;
-          width: 50%;
 
-        }
 
-        .list-item {
+      }
+
+    }
+
+    .pagination-container {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(123, 123, 123, 0.584);
+        border-radius: 50px;
+
+
+        li {
+          color: orangered;
+          font-size: x-large;
           margin: 5px;
-        }
 
-        .card {
-          display: flex;
-          flex-direction: column;
-
-          .card-header {
-            flex: 1 1;
-            position: relative;
-            padding-bottom: 100%;
-
-            .remove-item {
-              position: absolute;
-              top: 5px;
-              right: 5px;
-              z-index: 2;
-              cursor: pointer;
-            }
-
-            img {
-              border-radius: 10px 10px 0 0;
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              inset: 0;
-              object-fit: cover;
-              object-position: center;
-            }
+          a {
+            color: white;
+            text-decoration: none;
           }
 
-          .card-body {
-            padding: 5px;
-            background-color: rgba(123, 123, 123, 0.584);
-            border-radius: 0 0 10px 10px;
-            border-top: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+        }
+      }
+    }
 
-            h2 {
-              color: antiquewhite;  
-              a{
-                color: darkorange;
-                text-decoration: none;
+    .container {
+      display: flex;
+      justify-content: center;
+
+      main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: black;
+
+        .container-main {
+          height: 100%;
+          width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+
+          .list-items {
+            width: 80%;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            @media (max-width:768px) {
+              grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            @media (max-width:510px) {
+              grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            @media (max-width:310px) {
+              grid-template-columns: 1fr;
+              width: 50%;
+
+            }
+
+            .list-item {
+              margin: 5px;
+            }
+
+            .card {
+              display: flex;
+              flex-direction: column;
+
+              .card-header {
+                flex: 1 1;
+                position: relative;
+                padding-bottom: 100%;
+
+                .remove-item {
+                  position: absolute;
+                  top: 5px;
+                  right: 5px;
+                  z-index: 2;
+                  cursor: pointer;
+                }
+
+                img {
+                  border-radius: 10px 10px 0 0;
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  inset: 0;
+                  object-fit: cover;
+                  object-position: center;
+                }
+              }
+
+              .card-body {
+                height: 7vh;
+                padding: 5px;
+                background-color: rgba(123, 123, 123, 0.584);
+                border-radius: 0 0 10px 10px;
+                border-top: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                h2 {
+                  color: antiquewhite;
+
+                  a {
+                    color: darkorange;
+                    text-decoration: none;
+                  }
+                }
+
+                span {
+                  color: antiquewhite;
+                }
+
               }
             }
-            
-            span {
-              color: antiquewhite;
-            }
-
           }
         }
       }
     }
   }
+
 }
