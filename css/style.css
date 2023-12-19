@@ -135,34 +135,58 @@ table {
 }
 
 body {
-  background-color: black;
+  position: relative;
 }
 body .character-body {
+  background-color: rgba(0, 0, 0, 0.849);
   display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
 }
 body .character-body .character-grid {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100%;
   margin: 0;
 }
 body .character-body .character-grid .character-container {
   border-radius: 10px;
   background-color: rgb(123, 123, 123);
 }
+body .character-body .character-grid .character-container .character-images {
+  position: relative;
+}
 body .character-body .character-grid .character-container .character-images img {
   width: 400px;
   border-radius: 10px 10px 0 0;
+}
+@media (max-width: 768px) {
+  body .character-body .character-grid .character-container .character-images img {
+    width: auto;
+  }
+}
+body .character-body .character-grid .character-container .back-button {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 32px;
 }
 body .character-body .character-grid .character-container .character-feature {
   display: flex;
   align-items: start;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 3px;
+  justify-content: space-between;
+  padding: 10px;
 }
 body .character-body .character-grid .character-container .character-feature h2,
 body .character-body .character-grid .character-container .character-feature span {
+  padding: 3px;
   color: antiquewhite;
 }
 body .character-body .character-grid .character-container .character-feature a {
@@ -196,12 +220,10 @@ body .character-list-general .pagination-container ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(123, 123, 123, 0.584);
   border-radius: 50px;
 }
 body .character-list-general .pagination-container ul li {
   color: orangered;
-  font-size: x-large;
   margin: 5px;
 }
 body .character-list-general .pagination-container ul li a {
@@ -293,6 +315,7 @@ body .character-list-general .container main .container-main .list-items .card .
   color: antiquewhite;
 }
 body .character-list-general .container main .container-main .list-items .card .card-body h2 a {
+  cursor: pointer;
   color: darkorange;
   text-decoration: none;
 }

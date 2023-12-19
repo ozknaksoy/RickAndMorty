@@ -1,37 +1,61 @@
 @import "reset";
 
 body {
-  background-color: black;
+  position: relative;
 
   .character-body {
+    background-color: rgba(0, 0, 0, 0.849);
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
 
     .character-grid {
       display: grid;
       place-items: center;
-      height: 100vh;
+      height: 100%;
       margin: 0;
 
       .character-container {
         border-radius: 10px;
-        background-color: rgba(123, 123, 123);
+        background-color: rgb(123, 123, 123);
 
         .character-images {
+          position: relative;
+
           img {
             width: 400px;
             border-radius: 10px 10px 0 0;
           }
+          @media (max-width: 768px) {
+            img {
+              width: auto;
+            }
+          }
+        }
+
+        .back-button {
+          cursor: pointer;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 32px;
         }
 
         .character-feature {
           display: flex;
           align-items: start;
           flex-direction: column;
-          justify-content: space-around;
-          padding: 3px;
+          justify-content: space-between;
+          padding: 10px;
 
           h2,
           span {
+            padding: 3px;
             color: antiquewhite;
           }
 
@@ -44,9 +68,6 @@ body {
   }
 
   .character-list-general {
-
-
-
     header {
       display: flex;
       justify-content: center;
@@ -63,13 +84,8 @@ body {
           z-index: 1;
           opacity: 0.8;
           width: 100%;
-
         }
-
-
-
       }
-
     }
 
     .pagination-container {
@@ -79,25 +95,21 @@ body {
       align-items: center;
       height: 50px;
 
-
       ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(123, 123, 123, 0.584);
+        // background-color: rgba(123, 123, 123, 0.254);
         border-radius: 50px;
-
 
         li {
           color: orangered;
-          font-size: x-large;
           margin: 5px;
 
           a {
             color: white;
             text-decoration: none;
           }
-
         }
       }
     }
@@ -126,20 +138,17 @@ body {
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
 
-            @media (max-width:768px) {
+            @media (max-width: 768px) {
               grid-template-columns: repeat(3, 1fr);
-
             }
 
-            @media (max-width:510px) {
+            @media (max-width: 510px) {
               grid-template-columns: repeat(2, 1fr);
-
             }
 
-            @media (max-width:310px) {
+            @media (max-width: 310px) {
               grid-template-columns: 1fr;
               width: 50%;
-
             }
 
             .list-item {
@@ -188,6 +197,7 @@ body {
                   color: antiquewhite;
 
                   a {
+                    cursor: pointer;
                     color: darkorange;
                     text-decoration: none;
                   }
@@ -196,7 +206,6 @@ body {
                 span {
                   color: antiquewhite;
                 }
-
               }
             }
           }
@@ -204,5 +213,4 @@ body {
       }
     }
   }
-
 }
