@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     return backButton;
   };
+  console.log("123");
 
   const updateCharacterNameSpans = () => {
     const characterNameSpans =
