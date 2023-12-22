@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     return backButton;
   };
-  console.log("123");
+
+  console.log("12345");
 
   const updateCharacterNameSpans = () => {
     const characterNameSpans =
