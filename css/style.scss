@@ -184,14 +184,13 @@ body {
               }
 
               .card-body {
-                height: 7vh;
+                height: 100%;
                 padding: 5px;
                 background-color: rgba(123, 123, 123, 0.584);
                 border-radius: 0 0 10px 10px;
                 border-top: none;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
 
                 h2 {
                   color: antiquewhite;
